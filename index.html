@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+   <nav id="nav-bar">
+       <ul>
+           <li><a href="#home">Home</a></li>
+           <li><a href="#about">About</a></li>
+           <li><a href="#contact">Contact</a></li>
+       </ul>
+   </nav>
+
+   <section id="hero">
+        <li>location name</li>
+        <img src="./assets/HeroVertical.png" alt="Hero Image">
+        <h1>Place name</h1>
+        <p>catchy tagline</p>
+   </section>
+
+   <section id="looping-sidescrolling-pills">
+        <ul>
+            <li>enticing text pill 1</li>
+            <li>enticing text pill 2</li>
+            <li>enticing text pill 3</li>
+            <li>enticing text pill 4</li>
+            <li>enticing text pill 5</li>
+
+
+
+            <li>enticing text pill 1</li>
+            <li>enticing text pill 2</li>
+            <li>enticing text pill 3</li>
+            <li>enticing text pill 4</li>
+            <li>enticing text pill 5</li>
+        </ul>
+   </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>This is the about section where information about the website or company will be displayed.</p>
+
+        <div id="photos-gallery">
+            <ul id="track">
+                <li id="track-item">
+                    <img src="./assets/HeroVertical.png" alt="Photo 1">
+                    <p>Photo 1 description</p>
+                    <p>Photo 1 additional info</p>
+                </li>
+                <li id="track-item">
+                    <img src="./assets/HeroVertical.png" alt="Photo 2">
+                    <p>Photo 2 description</p>
+                    <p>Photo 2 additional info</p>
+                </li>
+                <li id="track-item">
+                    <img src="./assets/HeroVertical.png" alt="Photo 3">
+                    <p>Photo 3 description</p>
+                    <p>Photo 3 additional info</p>
+                </li>
+            </ul>
+
+            
+        <button aria-label="More details (about)">
+            More details
+        </button>
+
+            
+        </div>
+
+       
+
+    </section>
+
+   <section id="rent-form">
+        <h2>Rent form</h2>
+        <form action="#" method="post">
+            <label for="name">Renter's Name:</label>
+            <input type="text" id="name" name="name" placeholder="Name" required>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="E-Mail" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+
+            <label for="checkin">Check-in Date:</label>
+            <input type="date" id="checkin" name="checkin" required>
+
+            <label for="checkout">Check-out Date:</label>
+            <input type="date" id="checkout" name="checkout" required>
+
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" placeholder="Number"  required>
+
+            <button type="submit">Confirm</button>
+        </form>
+   </section>
+
+   <script src="script.js"></script>
+</body>
+
+</html>

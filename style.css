@@ -1,0 +1,420 @@
+
+*{
+    margin: 0;
+    padding: 0;
+
+    --accent_1: #2e3d72;
+    --accent_2: #bdb482;
+
+    --background: #121212;
+    --card_background: #1a1a1a;
+
+    --text_primary: #ffffff;
+    --text_secondary: #b0b0b0;
+
+}
+
+body{
+    width: 100%;
+    font-family: 'Avenir', sans-serif;
+    background-color: var(--background);
+    color: var(--text_primary);
+    overflow-x: hidden;
+}
+
+/*
+ ,ggg, ,ggggggg,                               ,ggggggggggg,                         
+dP""Y8,8P"""""Y8b                             dP"""88""""""Y8,                       
+Yb, `8dP'     `88                             Yb,  88      `8b                       
+ `"  88'       88                              `"  88      ,8P                       
+     88        88                                  88aaaad8P"                        
+     88        88    ,gggg,gg     ggg    gg        88""""Y8ba    ,gggg,gg   ,gggggg, 
+     88        88   dP"  "Y8I    d8"Yb   88bg      88      `8b  dP"  "Y8I   dP""""8I 
+     88        88  i8'    ,8I   dP  I8   8I        88      ,8P i8'    ,8I  ,8'    8I 
+     88        Y8,,d8,   ,d8b,,dP   I8, ,8I        88_____,d8',d8,   ,d8b,,dP     Y8,
+     88        `Y8P"Y8888P"`Y88"     "Y8P"        88888888P"  P"Y8888P"`Y88P      `Y8
+*/
+
+nav{
+    position: sticky;
+    z-index: 5;
+    background-color: #00000054;
+    backdrop-filter: blur(5px);
+    padding: 1rem;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* 
+ ,ggg,        gg                                  
+dP""Y8b       88                                  
+Yb, `88       88                                  
+ `"  88       88                                  
+     88aaaaaaa88                                  
+     88"""""""88   ,ggg,    ,gggggg,    ,ggggg,   
+     88       88  i8" "8i   dP""""8I   dP"  "Y8ggg
+     88       88  I8, ,8I  ,8'    8I  i8'    ,8I  
+     88       Y8, `YbadP' ,dP     Y8,,d8,   ,d8'  
+     88       `Y8888P"Y8888P      `Y8P"Y8888P"                                                                                          
+*/
+
+
+#hero
+{
+    z-index: 1;
+    margin-top: -6.4rem;
+    margin-bottom: 3.5rem;;
+    height: 42rem;
+}
+
+#hero img
+{
+    z-index: 1;
+    display: block;
+    height: 100%;
+    margin: 0 auto;
+   
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+}
+
+#hero li {
+    display: inline-block;
+    position: relative;;
+    z-index: 2;
+    top: 8rem;
+    margin-bottom: 0;
+
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+
+    font-size: 1rem;
+    color: var(--text_primary);
+
+    list-style: none;  
+    
+    padding: 0.75rem 1.25rem;
+    border: 4px solid var(--accent_1);
+
+    background-color: #131313be;
+    backdrop-filter: blur(10px);
+    border-radius: 120px;
+}
+
+#hero h1
+{
+    position: relative;
+    bottom: 8.8rem;
+    margin-bottom: 0;
+
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 3rem;
+    color: var(--text_primary);
+}
+
+#hero p
+{
+    position: relative;
+    bottom: 8.6rem;
+    margin: 0;
+
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: 1.5rem;
+    color: var(--text_secondary);
+}
+
+@media (min-width: 450px) {
+    #hero img {
+        content: url("../assets/HeroHorizontal.png");
+    }
+}
+
+/*                                                                                                                
+ ,dPYb,                                                                                       ,dPYb, ,dPYb,          
+ IP'`Yb                                                                                       IP'`Yb IP'`Yb          
+ I8  8I                                     gg                                           gg   I8  8I I8  8I          
+ I8  8'                                     ""                                           ""   I8  8' I8  8'          
+ I8 dP    ,ggggg,    ,ggggg,   gg,gggg,     gg    ,ggg,,ggg,     ,gggg,gg   gg,gggg,     gg   I8 dP  I8 dP    ,g,    
+ I8dP    dP"  "Y8gggdP"  "Y8gggI8P"  "Yb    88   ,8" "8P" "8,   dP"  "Y8I   I8P"  "Yb    88   I8dP   I8dP    ,8'8,   
+ I8P    i8'    ,8I i8'    ,8I  I8'    ,8i   88   I8   8I   8I  i8'    ,8I   I8'    ,8i   88   I8P    I8P    ,8'  Yb  
+,d8b,_ ,d8,   ,d8',d8,   ,d8' ,I8 _  ,d8' _,88,_,dP   8I   Yb,,d8,   ,d8I  ,I8 _  ,d8' _,88,_,d8b,_ ,d8b,_ ,8'_   8) 
+8P'"Y88P"Y8888P"  P"Y8888P"   PI8 YY88888P8P""Y88P'   8I   `Y8P"Y8888P"888 PI8 YY88888P8P""Y88P'"Y888P'"Y88P' "YY8P8P
+                               I8                                    ,d8I'  I8                                       
+                               I8                                  ,dP'8I   I8                                       
+                               I8                                 ,8"  8I   I8                                       
+                               I8                                 I8   8I   I8                                       
+                               I8                                 `8, ,8I   I8                                       
+                               I8                                  `Y8P"    I8                                       
+*/
+
+#looping-sidescrolling-pills
+{
+    padding: 1rem 1rem;
+    overflow: hidden;
+}
+
+#looping-sidescrolling-pills ul
+{
+    list-style: none;
+    display: flex;    
+    flex-wrap: nowrap;     
+    gap: 1rem;      
+    
+    width: max-content;
+    transform: translateZ(0);
+    
+    will-change: transform;
+    animation: loop-sidescrolling-pills 30s linear infinite;
+}
+
+#looping-sidescrolling-pills ul li
+{
+    display: inline-block;
+    flex: 0 0 auto;             
+    margin: 0;
+
+    padding: 0.75rem 1.25rem;
+    background-color: var(--accent_1);
+    border-radius: 120px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+    font-size: 1rem;
+    text-align: center;
+    white-space: nowrap;
+}
+
+@keyframes loop-sidescrolling-pills {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+
+/*                                             
+             ,dPYb,                             I8   
+             IP'`Yb                             I8   
+             I8  8I                          88888888
+             I8  8'                             I8   
+   ,gggg,gg  I8 dP       ,ggggg,   gg      gg   I8   
+  dP"  "Y8I  I8dP   88ggdP"  "Y8gggI8      8I   I8   
+ i8'    ,8I  I8P    8I i8'    ,8I  I8,    ,8I  ,I8,  
+,d8,   ,d8b,,d8b,  ,8I,d8,   ,d8' ,d8b,  ,d8b,,d88b, 
+P"Y8888P"`Y88P'"Y88P"'P"Y8888P"   8P'"Y88P"`Y88P""Y8 
+*/
+
+#about
+{
+    padding: 2.4rem 1rem;
+    text-align: center;
+}
+
+#about h2
+{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#about p
+{
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#about ul{
+    margin-top: 1.5rem;
+    list-style: none;
+    display: flex;    
+    flex-wrap: nowrap;     
+    gap: 1rem;      
+    justify-content: center;
+}
+
+/*                                            
+             ,dPYb,                 I8               
+             IP'`Yb                 I8               
+             I8  8I              88888888            
+             I8  8'                 I8               
+ gg,gggg,    I8 dPgg,     ,ggggg,   I8     ,ggggg,   
+ I8P"  "Yb   I8dP" "8I   dP"  "Y8gggI8    dP"  "Y8ggg
+ I8'    ,8i  I8P    I8  i8'    ,8I ,I8,  i8'    ,8I  
+,I8 _  ,d8' ,d8     I8,,d8,   ,d8',d88b,,d8,   ,d8'  
+PI8 YY88888P88P     `Y8P"Y8888P"  8P""Y8P"Y8888P"    
+ I8                                                  
+ I8                                                  
+ I8                                                  
+ I8                                                  
+ I8                                                  
+ I8                                                  
+*/
+
+#photo-gallery
+{
+    flex: 1;
+    overflow: auto;
+    position: relative;
+   mask: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    padding: 2.4rem 0;
+
+}
+
+#photos-gallery ul
+{
+    overflow-x: auto;
+    mask: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    scrollbar-width: none;
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+#photos-gallery ul li
+{
+    flex: 0 0 auto;
+    width: min(58vw, 340px);
+
+    will-change: transform;
+}
+
+#photos-gallery ul li img
+{
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+
+#photos-gallery button
+
+@keyframes photo-gallery-loop {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+
+
+
+
+
+
+
+/*                                                                                          
+ ,dPYb,                                         
+ IP'`Yb                                         
+ I8  8I                                         
+ I8  8'                                         
+ I8 dP    ,ggggg,   ,gggggg,   ,ggg,,ggg,,ggg,  
+ I8dP    dP"  "Y8gggdP""""8I  ,8" "8P" "8P" "8, 
+ I8P    i8'    ,8I ,8'    8I  I8   8I   8I   8I 
+,d8b,_ ,d8,   ,d8',dP     Y8,,dP   8I   8I   Yb,
+PI8"888P"Y8888P"  8P      `Y88P'   8I   8I   `Y8
+ I8 `8,                                         
+ I8  `8,                                        
+ I8   8I                                        
+ I8   8I                                        
+ I8, ,8'                                        
+  "Y8P'                                         
+*/
+
+#rent-form
+{
+    padding: 2.4rem 1rem;
+    text-align: center;
+    margin-bottom: 20rem;
+}
+
+#rent-form h2
+{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#rent-form form
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    background: var(--card_background);
+    padding: 20px;
+    border-radius: 20px;
+    border: var(--accent_1) 4px solid;
+}
+
+#rent-form input{
+
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    width: 80%;
+    max-width: 400px;
+
+    border: 1px solid #404040;
+    border-radius: 8px;
+    background-color: var(--background);
+
+    color: var(--text_primary);
+    font-family: 'Avenir', sans-serif;
+    font-style: italic;
+    font-size: 0.9rem;
+
+    color-scheme: dark;
+}
+
+#rent-form button{
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+
+    background-color: var(--accent_1);
+    color: var(--text_primary);
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+#rent-form button:hover {
+    background-color: #3d4f8a;
+    border-color: #3d4f8a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(46, 61, 114, 0.4);
+}
+
+#rent-form button:active {
+    transform: translateY(0);
+}
