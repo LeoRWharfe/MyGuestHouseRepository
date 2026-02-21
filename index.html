@@ -10,23 +10,23 @@
 
 <body>
     
-   <nav id="nav-bar">
+   <nav id="nav-bar" aria-label="Main navigation">
        <ul>
-           <li><a href="#home">Home</a></li>
-           <li><a href="#about">About</a></li>
-           <li><a href="#contact">Contact</a></li>
+           <li><a href="#home" aria-label="Go to Home page">Home</a></li>
+           <li><a href="details.html" aria-label="Go to Details page">Details</a></li>
+           <li><a href="contact.html" aria-label="Go to Contact page">Contact</a></li>
        </ul>
    </nav>
 
    <section id="hero">
-        <li>location name</li>
+        <p>location name</p>
         <img src="./assets/HeroVertical.png" alt="Hero Image">
         <h1>Place name</h1>
         <p>catchy tagline</p>
    </section>
 
-   <section id="looping-sidescrolling-pills">
-        <ul>
+   <section id="looping-sidescrolling-pills" aria-label="Featured highlights carousel">
+        <ul aria-label="Scrolling text pills">
             <li>enticing text pill 1</li>
             <li>enticing text pill 2</li>
             <li>enticing text pill 3</li>
@@ -44,41 +44,41 @@
    </section>
 
     <section id="about">
-        <h2>About Us</h2>
+        <h2>About</h2>
         <p>This is the about section where information about the website or company will be displayed.</p>
 
-        <div id="photos-gallery">
-            <ul id="track">
-                <li id="track-item">
+        <section id="photos-gallery" aria-label="Photo gallery">
+            <ul id="track" aria-label="Photo carousel">
+                <li class="track-item">
                     <img src="./assets/HeroVertical.png" alt="Photo 1">
                     <p>Photo 1 description</p>
                     <p>Photo 1 additional info</p>
                 </li>
-                <li id="track-item">
+                <li class="track-item">
                     <img src="./assets/HeroVertical.png" alt="Photo 2">
                     <p>Photo 2 description</p>
                     <p>Photo 2 additional info</p>
                 </li>
-                <li id="track-item">
+                <li class="track-item">
                     <img src="./assets/HeroVertical.png" alt="Photo 3">
                     <p>Photo 3 description</p>
                     <p>Photo 3 additional info</p>
                 </li>
             </ul>
-
             
-        <button aria-label="More details (about)">
+            
+        <a href="details.html" aria-label="More details (about)" >
             More details
-        </button>
+        </a>
 
             
-        </div>
+        </section>
 
        
 
     </section>
 
-   <section id="rent-form">
+   <section id="form">
         <h2>Rent form</h2>
         <form action="#" method="post">
             <label for="name">Renter's Name:</label>
@@ -102,8 +102,6 @@
             <button type="submit">Confirm</button>
         </form>
    </section>
-
-   <script src="script.js"></script>
 </body>
 
 </html>

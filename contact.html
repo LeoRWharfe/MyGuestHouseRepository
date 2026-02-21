@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav id="nav-bar" aria-label="Main navigation">
+       <ul>
+           <li><a href="index.html" aria-label="Go to Home page">Home</a></li>
+           <li><a href="details.html" aria-label="Go to Details page">Details</a></li>
+           <li><a href="#contact" aria-label="Go to Contact section">Contact</a></li>
+       </ul>
+   </nav>
+
+    <section id="form" aria-label="Contact form section">
+        <h2>Contact Form</h2>
+        <form action="#" method="post" aria-label="Contact form">
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="E-Mail" aria-label="Email address input" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your message here..." aria-label="Message input field" required></textarea>
+
+            <button type="submit" aria-label="Submit contact form">submit</button>
+    </form>
+   </section>
+</body>
