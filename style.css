@@ -157,7 +157,7 @@ Yb, `88       88
 
 @media (min-width: 450px) {
     #hero img {
-        content: url("..public_html/MyGuestHouse/assets/HeroHorizontal.png");
+        content: url("../assets/HeroHorizontal.png"); /*hmm*/
     }
 }
 
