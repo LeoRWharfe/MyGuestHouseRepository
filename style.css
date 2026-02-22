@@ -418,7 +418,7 @@ PI8"888P"Y8888P"  8P      `Y88P'   8I   8I   `Y8
     font-size: 1rem;
 
     background-color: var(--accent_2);
-    color: var(--text_primary);
+    color: var(--background);
 
     border: none;
     border-radius: 8px;
